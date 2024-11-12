@@ -1,6 +1,11 @@
 services:
   portal:
     build: .
-    container_name: masterportal-test
+    container_name: mp-dana
     ports:
       - 80:80
+  backend:
+    build: .
+    container_name: dana-backend
+    ports:
+      - 3000:80

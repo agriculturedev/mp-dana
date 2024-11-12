@@ -141,8 +141,8 @@ const Config = {
         oidcTokenEndpoint: "https://keycloak.elie.de/realms/masterportal-dev/protocol/openid-connect/token",
         oidcClientId: "masterportal-dev-client",
         oidcScope: "profile email openid",
-        oidcRedirectUri: "https://elie-dana.onrender.com/",
-        interceptorUrlRegex: "https?://dana-backend.*" // add authorization to all URLs that match the given regex
+        oidcRedirectUri: "https://localhost:9001/portal/mobility-data/",
+        interceptorUrlRegex: "https?://localhost.*" // add authorization to all URLs that match the given regex
     },
 };
 

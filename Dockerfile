@@ -10,8 +10,16 @@ WORKDIR /app
 RUN mkdir mp
 RUN git clone --branch v2.49.0 https://bitbucket.org/geowerkstatt-hamburg/masterportal.git ./mp
 
+COPY plugins /app/mp/addons
+
 # Install dependencies
 RUN npm --prefix ./mp install
+
+# Install dependencies
+RUN npm --prefix ./mp/addons ci
+
+# Install dependencies
+RUN npm --prefix ./mp/addons/dipasAddons/dataNarrator install --legacy-peer-deps
 
 # Copy the "portal" folder to /app/portal/portal
 COPY portal /app/mp/portal/portal

@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: Hagenfaber/MP-builder
+  IMAGE_NAME: agriculturedev/mp-dana
 
 jobs:
   build-and-push-image:
