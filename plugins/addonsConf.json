@@ -1,0 +1,13 @@
+{
+  "dataNarrator": {
+    "path": "dipasAddons/dataNarrator",
+    "type": "tool"
+  },
+  "fileImportAddon": {
+    "type": "tool"
+  },
+  "resultsTheme": {
+    "path": "results",
+    "type": "gfiTheme"
+  }
+}
