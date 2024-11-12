@@ -1,0 +1,6 @@
+services:
+  portal:
+    build: .
+    container_name: masterportal-test
+    ports:
+      - 80:80
