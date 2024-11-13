@@ -141,7 +141,7 @@ const Config = {
         oidcTokenEndpoint: "https://keycloak.elie.de/realms/masterportal-dev/protocol/openid-connect/token",
         oidcClientId: "masterportal-dev-client",
         oidcScope: "profile email openid",
-        oidcRedirectUri: "https://localhost:9001/portal/mobility-data/",
+        oidcRedirectUri: "http://localhost",
         interceptorUrlRegex: "https?://localhost.*" // add authorization to all URLs that match the given regex
     },
 };

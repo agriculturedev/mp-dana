@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM node:18 AS build
+FROM node:16.13 AS build
 
 # Set working directory in the container
 WORKDIR /app
@@ -8,9 +8,11 @@ WORKDIR /app
 # Replace <GIT_REPOSITORY_URL> with your repository URL
 # Replace <TAG> with the desired tag
 RUN mkdir mp
-RUN git clone --branch v2.49.0 https://bitbucket.org/geowerkstatt-hamburg/masterportal.git ./mp
+RUN git clone --branch v2.37.0 https://bitbucket.org/geowerkstatt-hamburg/masterportal.git ./mp
+RUN rm -rf ./mp/addons
+RUN git clone --branch v2.37.0 https://bitbucket.org/geowerkstatt-hamburg/addons.git ./mp/addons
 
-COPY plugins /app/mp/addons
+COPY plugins ./mp/addons
 
 # Install dependencies
 RUN npm --prefix ./mp install
@@ -22,7 +24,7 @@ RUN npm --prefix ./mp/addons ci
 RUN npm --prefix ./mp/addons/dipasAddons/dataNarrator install --legacy-peer-deps
 
 # Copy the "portal" folder to /app/portal/portal
-COPY portal /app/mp/portal/portal
+COPY portal ./mp/portal
 
 # Build the project
 RUN npm --prefix ./mp run buildPortal

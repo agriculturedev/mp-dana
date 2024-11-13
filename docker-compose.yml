@@ -4,8 +4,9 @@ services:
     container_name: mp-dana
     ports:
       - 80:80
+#
   backend:
-    build: .
+    build: ./backend
     container_name: dana-backend
     ports:
       - 3000:80
