@@ -3,8 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/backend" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/dist" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/dist/addons" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/plugins/dipasAddons/dataNarrator" vcs="Git" />
   </component>
 </project>

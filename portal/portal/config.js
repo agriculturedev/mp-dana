@@ -137,11 +137,11 @@ const Config = {
         changeLanguageOnStartWhen: ["querystring", "localStorage", "htmlTag"]
     },
     login: {
-        oidcAuthorizationEndpoint: "https://keycloak.elie.de/realms/masterportal-dev/protocol/openid-connect/auth",
-        oidcTokenEndpoint: "https://keycloak.elie.de/realms/masterportal-dev/protocol/openid-connect/token",
-        oidcClientId: "masterportal-dev-client",
+        oidcAuthorizationEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/auth",
+        oidcTokenEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/token",
+        oidcClientId: "elie-dana-client",
         oidcScope: "profile email openid",
-        oidcRedirectUri: "http://localhost",
+        oidcRedirectUri: "http://localhost:3001",
         interceptorUrlRegex: "https?://localhost.*" // add authorization to all URLs that match the given regex
     },
 };
