@@ -1,9 +1,10 @@
 services:
-#  portal:
-#    build: .
-#    container_name: mp-dana
-#    ports:
-#      - 3001:80
+  portal:
+    platform: linux/amd64
+    build: .
+    container_name: mp-dana
+    ports:
+      - 3001:80
 
 #  backend:
 #    build: ./backend
@@ -28,7 +29,7 @@ services:
     image: mongo:6-jammy
     container_name: mongodb-elie
     ports:
-      - '27019:27017'
+      - '27017:27017'
     volumes:
       - dbdata6:/data/db
 
