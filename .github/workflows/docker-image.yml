@@ -13,15 +13,22 @@ jobs:
   build-and-push-image:
     runs-on: ubuntu-20.04
     environment: main
+
     permissions:
+      actions: read
       contents: read
+      pages: write
+      id-token: write
       packages: write
+
+
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           submodules: 'true'
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
