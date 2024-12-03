@@ -1,11 +1,11 @@
 const fs = require('fs');
 require('dotenv').config();
 
-const inputFilePath = "portal/portal/config.js";
-const outputFilePath = "portal/portal/config.js";
+const inputFilePath = "mp/portal/portal/config.js";
+const outputFilePath = "mp/portal/portal/config.js";
 
-const inputConfigFilePath = "portal/portal/config.json";
-const outputConfigFilePath = "portal/portal/config.json";
+const inputConfigFilePath = "mp/portal/portal/config.json";
+const outputConfigFilePath = "mp/portal/portal/config.json";
 
 
 // Define the placeholders and their replacements

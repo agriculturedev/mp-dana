@@ -29,8 +29,9 @@ RUN npm --prefix ./mp/addons/dipasAddons/dataNarrator install --legacy-peer-deps
 
 # Copy the "portal" folder to /app/portal/portal
 COPY build-scripts/replaceEnvironment.js ./replaceEnvironment.js
-RUN node replaceEnvironment.js
+
 COPY portal ./mp/portal
+RUN node replaceEnvironment.js
 
 # Build the project
 RUN npm --prefix ./mp run buildPortal
