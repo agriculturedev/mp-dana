@@ -21,8 +21,6 @@ jobs:
       id-token: write
       packages: write
 
-
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -47,6 +45,14 @@ jobs:
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
+          build-args: |
+            AUTH_ENDPOINT=${{ vars.AUTH_ENDPOINT }}
+            TOKEN_ENDPOINT=${{ vars.TOKEN_ENDPOINT }}
+            CLIENT_ID=${{ vars.CLIENT_ID }}
+            SCOPE=${{ vars.SCOPE }}
+            REDIRECT_URI=${{ vars.REDIRECT_URI }}
+            INTERCEPTOR_URL_REGEX=${{ vars.INTERCEPTOR_URL_REGEX }}
+            BACKEND_URL=${{ vars.BACKEND_URL }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
