@@ -4,6 +4,10 @@ FROM node:16.13 AS build
 # Set working directory in the container
 WORKDIR /app
 
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm ci
+
 # Clone the repository with a specific tag
 # Replace <GIT_REPOSITORY_URL> with your repository URL
 # Replace <TAG> with the desired tag
@@ -24,6 +28,8 @@ RUN npm --prefix ./mp/addons ci
 RUN npm --prefix ./mp/addons/dipasAddons/dataNarrator install --legacy-peer-deps
 
 # Copy the "portal" folder to /app/portal/portal
+COPY build-scripts/replaceEnvironment.js ./replaceEnvironment.js
+RUN node replaceEnvironment.js
 COPY portal ./mp/portal
 
 # Build the project

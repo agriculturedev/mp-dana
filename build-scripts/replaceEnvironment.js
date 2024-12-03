@@ -2,7 +2,11 @@ const fs = require('fs');
 require('dotenv').config();
 
 const inputFilePath = "portal/portal/config.js";
-const outputFilePath = "portal/portal/newConfig.js";
+const outputFilePath = "portal/portal/config.js";
+
+const inputConfigFilePath = "portal/portal/config.json";
+const outputConfigFilePath = "portal/portal/config.json";
+
 
 // Define the placeholders and their replacements
 const replacements = {
@@ -36,3 +40,12 @@ fs.readFile(inputFilePath, 'utf8', (err, data) => {
         console.log('File processed successfully!');
     });
 });
+
+let rawdata = fs.readFileSync(inputConfigFilePath, 'utf8');
+let config = JSON.parse(rawdata);
+console.log(config.Portalconfig.menu.tools.children.dataNarrator.backendURL, process.env.BACKEND_URL);
+config.Portalconfig.menu.tools.children.dataNarrator.backendURL = process.env.BACKEND_URL;
+
+fs.writeFileSync(outputConfigFilePath, JSON.stringify(config));
+
+
