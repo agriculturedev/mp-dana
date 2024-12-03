@@ -121,7 +121,6 @@ const Config = {
     restConf:
         "https://geodienste.hamburg.de/lgv-config/rest-services-internet.json",
     styleConf: "https://raw.githubusercontent.com/herzogrh/faircare-verkehr/main/assets/data/style.json",
-    storyConf: "./assets/story.json",
     isMenubarVisible: true,
     gemarkungen: "https://geodienste.hamburg.de/lgv-config/gemarkung.json",
     obliqueMap: true,
@@ -137,12 +136,12 @@ const Config = {
         changeLanguageOnStartWhen: ["querystring", "localStorage", "htmlTag"]
     },
     login: {
-        oidcAuthorizationEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/auth",
-        oidcTokenEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/token",
-        oidcClientId: "elie-dana-client",
-        oidcScope: "profile email openid",
-        oidcRedirectUri: "http://localhost:3001",
-        interceptorUrlRegex: "https?://localhost.*" // add authorization to all URLs that match the given regex
+        oidcAuthorizationEndpoint: "{{AUTH_ENDPOINT}}",
+        oidcTokenEndpoint: "{{TOKEN_ENDPOINT}}",
+        oidcClientId: "{{CLIENT_ID}}",
+        oidcScope: "{{SCOPE}}",
+        oidcRedirectUri: "{{REDIRECT_URI}}",
+        interceptorUrlRegex: "{{INTERCEPTOR_URL_REGEX}}" // add authorization to all URLs that match the given regex
     },
 };
 
