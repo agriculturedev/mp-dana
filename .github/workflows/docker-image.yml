@@ -53,6 +53,7 @@ jobs:
             REDIRECT_URI=${{ vars.REDIRECT_URI }}
             INTERCEPTOR_URL_REGEX=${{ vars.INTERCEPTOR_URL_REGEX }}
             BACKEND_URL=${{ vars.BACKEND_URL }}
+            PAT_TOKEN=${{ secrets.PAT_TOKEN }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
