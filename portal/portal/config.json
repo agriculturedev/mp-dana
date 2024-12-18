@@ -42,7 +42,7 @@
             "name": "translate#additional:modules.tools.dataNarrator.title",
             "glyphicon": "glyphicon-book",
             "active": true,
-            "backendURL": "http://localhost:8080",
+            "backendURL": "https://backend.dana.elie.de",
             "autoplay": true
           },
           "gfi": {

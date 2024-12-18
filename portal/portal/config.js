@@ -136,12 +136,12 @@ const Config = {
         changeLanguageOnStartWhen: ["querystring", "localStorage", "htmlTag"]
     },
     login: {
-        oidcAuthorizationEndpoint: "{{AUTH_ENDPOINT}}",
-        oidcTokenEndpoint: "{{TOKEN_ENDPOINT}}",
-        oidcClientId: "{{CLIENT_ID}}",
-        oidcScope: "{{SCOPE}}",
-        oidcRedirectUri: "{{REDIRECT_URI}}",
-        interceptorUrlRegex: "{{INTERCEPTOR_URL_REGEX}}" // add authorization to all URLs that match the given regex
+        oidcAuthorizationEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/auth",
+        oidcTokenEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/token",
+        oidcClientId: "elie-dana-client",
+        oidcScope: "profile email openid",
+        oidcRedirectUri: "https://dana.elie.de",
+        interceptorUrlRegex: "https://dana.elie.de*" // add authorization to all URLs that match the given regex
     },
 };
 

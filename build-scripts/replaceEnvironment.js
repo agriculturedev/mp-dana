@@ -7,7 +7,6 @@ const outputFilePath = "mp/portal/portal/config.js";
 const inputConfigFilePath = "mp/portal/portal/config.json";
 const outputConfigFilePath = "mp/portal/portal/config.json";
 
-
 // Define the placeholders and their replacements
 const replacements = {
     '{{AUTH_ENDPOINT}}': process.env.AUTH_ENDPOINT,
