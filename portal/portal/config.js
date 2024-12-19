@@ -136,8 +136,8 @@ const Config = {
         changeLanguageOnStartWhen: ["querystring", "localStorage", "htmlTag"]
     },
     login: {
-        oidcAuthorizationEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/auth",
-        oidcTokenEndpoint: "https://keycloak.datanarrator.city/realms/elie-dana/protocol/openid-connect/token",
+        oidcAuthorizationEndpoint: "https://keycloak.jorenv.eu/realms/elie-dana/protocol/openid-connect/auth",
+        oidcTokenEndpoint: "https://keycloak.jorenv.eu/realms/elie-dana/protocol/openid-connect/token",
         oidcClientId: "elie-dana-client",
         oidcScope: "profile email openid",
         oidcRedirectUri: "https://dana.elie.de",
