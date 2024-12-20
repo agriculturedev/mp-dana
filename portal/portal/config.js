@@ -141,7 +141,7 @@ const Config = {
         oidcClientId: "elie-dana-client",
         oidcScope: "profile email openid",
         oidcRedirectUri: "https://dana.elie.de",
-        interceptorUrlRegex: "https://dana.elie.de*" // add authorization to all URLs that match the given regex
+        interceptorUrlRegex: "https://backend.dana.elie.de*" // add authorization to all URLs that match the given regex
     },
 };
 
