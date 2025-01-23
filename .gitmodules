@@ -1,6 +1,7 @@
 [submodule "plugins/dipasAddons/dataNarrator"]
 	path = plugins/dipasAddons/dataNarrator
-	url = git@github.com:agriculturedev/data-narrator-frontend.git
+	url = git@github.com:Hagenfaber/datanarrator.git
 [submodule "backend"]
 	path = backend
-	url = git@github.com:agriculturedev/data-narrator-backend.git
+	url = git@github.com:agriculturedev/new-dana-backend.git
+
